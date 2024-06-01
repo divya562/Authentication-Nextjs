@@ -7,10 +7,10 @@ export  async function GET(request: NextRequest){
             success:true
         })
         response.cookies.set("token","", {httpOnly:true, expires:new Date(0)})
-        localStorage.removeItem('token');
-        sessionStorage.removeItem('token');
+        
         return response;
     } catch (error:any) {
+        console.log(error.message)
         return NextResponse.json({error:error.message},
             {status:500}
         )
