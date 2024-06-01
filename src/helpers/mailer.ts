@@ -22,13 +22,21 @@ export const sendEmail= async ({email, emailType, userID, verifyCode}:any)=>{
       }
 
       var transport = nodemailer.createTransport({
-        host: "sandbox.smtp.mailtrap.io",
-        port: 2525,
+        host: "smtp.gmail.com",
+        port: 587,
         auth: {
-          user: "fa09de96695c0b",
-          pass: "506749ca06bc06"
+          user: "divyabagul48@gmail.com",
+          pass: "kobldpqixysxaewl"
         }
       });
+      // var transport = nodemailer.createTransport({
+      //   host: "sandbox.smtp.mailtrap.io",
+      //   port: 2525,
+      //   auth: {
+      //     user: "fa09de96695c0b",
+      //     pass: "506749ca06bc06"
+      //   }
+      // });
 
       const mailOption ={
         from:'divyabagul48@gmail.com',
