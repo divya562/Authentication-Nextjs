@@ -26,9 +26,7 @@ export default function LoginPage() {
       setLoading(true);
       const response = await axios.post("/api/users/login", user);
       console.log("Login Succesfully", response.data);
-      toast.success("Login success", {
-        theme: "colored",
-      });
+      toast.success("Login success");
       router.push("/profile");
     } catch (error: any) {
       console.log("Login Failed", error.message);
