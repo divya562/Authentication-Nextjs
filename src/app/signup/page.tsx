@@ -79,9 +79,9 @@ export default function SignupPage() {
   };
 
   return (
-    <div className="w-[400px] px-10 rounded-lg py-10 bg-white ">
-      <div className="text-center mb-10">
-        <h1 className="text-4xl font-medium">
+    <div className="w-[400px]  bg-white ">
+      <div className="text-center mb-12">
+        <h1 className="text-4xl font-bold">
           {loading ? (
             <ClipLoader
               loading={loading}
@@ -97,7 +97,7 @@ export default function SignupPage() {
       <div className="flex flex-col">
         <label>Username</label>
         <input
-          className="p-2 border border-gray-300 rounded-lg text-black mb-6"
+          className="p-2 border border-gray-300  text-black mb-8"
           id="username"
           type="text"
           value={user.username}
@@ -106,7 +106,7 @@ export default function SignupPage() {
         />
         <label>Email</label>
         <input
-          className="p-2 border border-gray-300 rounded-lg text-black mb-6"
+          className="p-2 border border-gray-300  text-black mb-8"
           id="email"
           type="text"
           value={user.email}
@@ -115,7 +115,7 @@ export default function SignupPage() {
         />
         <label>Password</label>
         <input
-          className="p-2 border border-gray-300 rounded-lg text-black mb-6"
+          className="p-2 border border-gray-300  text-black mb-10"
           id="Password"
           type="password"
           value={user.password}
@@ -127,14 +127,14 @@ export default function SignupPage() {
         )}
         <button
           onClick={onSignup}
-          className="p-2 border border-gray-300 bg-violet-700 hover:bg-violet-500 text-white rounded-lg mb-4 "
+          className="p-2 border border-gray-300 bg-violet-500 hover:bg-violet-700 text-white rounded-lg mb-8 "
         >
           Sign Up
         </button>
         <hr />
         <div className="text-center mt-6 ">
           <Link href="/login" className="text-slate-800">
-            Already have an account?<span className="underline">LOGIN</span>
+            Already have an account?<span className="underline hover:text-violet-700">LOGIN</span>
           </Link>
         </div>{" "}
       </div>

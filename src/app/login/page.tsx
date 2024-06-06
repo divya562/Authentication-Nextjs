@@ -62,9 +62,10 @@ export default function LoginPage() {
 
  
   return (
-    <div className="w-[400px] px-10 rounded-lg py-10 bg-white ">
-      <div className="text-center mb-10">
-        <h1 className="text-4xl font-medium">
+    <div className="w-[400px]  bg-white ">
+      <div className="text-center mb-20">
+        <h1></h1>
+        <h1 className="text-4xl font-bold">
           {loading ? (
             <ClipLoader
               loading={loading}
@@ -73,14 +74,14 @@ export default function LoginPage() {
               data-testid="loader"
             />
           ) : (
-            "Login"
+            "Welcome Back"
           )}
         </h1>
       </div>
       <div className="flex flex-col">
         <label>Email</label>
         <input
-          className="p-2 border border-gray-300 rounded-lg text-black mb-6"
+          className="p-2 border border-gray-300  text-black mb-8"
           id="email"
           type="text"
           value={user.email}
@@ -89,7 +90,7 @@ export default function LoginPage() {
         />
         <label>Password</label>
         <input
-          className="p-2 border border-gray-300 rounded-lg  text-black mb-6"
+          className="p-2 border border-gray-300   text-black mb-8"
           id="Password"
           type="password"
           value={user.password}
@@ -101,7 +102,7 @@ export default function LoginPage() {
         )}
         <button
           onClick={onLogin}
-          className="p-2 border border-gray-300 bg-violet-700 hover:bg-violet-500 text-white rounded-lg mb-4 "
+          className="p-2 border border-gray-300 bg-violet-500 hover:bg-violet-700 text-white rounded mb-6 "
         >
          LOGIN
         </button>
@@ -111,8 +112,8 @@ export default function LoginPage() {
         </div>
         <hr />
         <div className="text-center mt-6 ">
-          <Link href="/signup" className="text-slate-800">
-            Need an account?<span className="underline">SIGN UP</span>
+          <Link href="/signup" className="text-slate-800 ">
+            Need an account?<span className="underline hover:text-violet-500">SIGN UP</span>
           </Link>
         </div>
       </div>

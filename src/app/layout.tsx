@@ -19,11 +19,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <div className="bg-cover bg-center h-screen m-0 flex items-center justify-center" style={{ backgroundImage: `url("/img.jpg")` }}>
+        <div className="flex flex-row w-full h-screen ">
+        <div className="hidden md:block h-full  w-50 rounded ">
+          <img className="h-full w-full " src="https://cdn.dribbble.com/userupload/14898990/file/original-ba68e98ea10e1867e831884c3b153387.png?resize=752x" alt="" />
+        </div>
+        <div className="h-full md:w-1/2 p-5 flex justify-center items-center">
+      {/* <div className="bg-cover bg-center h-screen m-0 flex items-center justify-center" style={{ backgroundImage: `url("/img.jpg")` }}> */}
       {/* <div className="bg-cover bg-center h-screen m-0 flex items-center justify-center bg-gradient-to-r from-fuchsia-500 to-cyan-500 "> */}
       <ToastContainer />
         {children}
-        </div></body>
+        </div>
+       
+        </div>
+        </body>
     </html>
   );
 }
